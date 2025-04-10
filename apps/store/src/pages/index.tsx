@@ -673,11 +673,10 @@ export default function Home() {
               bg="#F5DEB3"
               color="#915a33"
               _hover={{ bg: "#F5DEB3", boxShadow: "inner" }}
-              px={{ base: 4, md: 8 }}
               h={'auto'}
-              py={{ base: 2, md: '12px' }}
+              px={{ base: 4, md: 8 }}
               fontWeight="bold"
-              size={{ base: "sm", md: "md" }}
+              size={{ base: "sm", md: "lg" }}
               borderRadius={{ base: 0, sm: "full" }}
               borderTopLeftRadius={{ base: 0, sm: 0 }}
               borderBottomLeftRadius={{ base: 0, sm: 0 }}
