@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  store:
+    build:
+      context: .
+      dockerfile: apps/store/Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./apps/store:/app/apps/store
+      - ./node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev:store
+
+  cart:
+    build:
+      context: .
+      dockerfile: apps/cart/Dockerfile
+    ports:
+      - '3001:3001'
+    volumes:
+      - ./apps/cart:/app/apps/cart
+      - ./node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev:cart

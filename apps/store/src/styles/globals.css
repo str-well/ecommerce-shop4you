@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 250, 246, 243;
+  --background-end-rgb: 250, 246, 243;
+  --chocolate-50: #faf5f0;
+  --chocolate-100: #f0e5d8;
+  --chocolate-200: #e5d0b8;
+  --chocolate-300: #d4b795;
+  --chocolate-400: #c19872;
+  --chocolate-500: #a87547;
+  --chocolate-600: #8f5e39;
+  --chocolate-700: #774b2e;
+  --chocolate-800: #603c27;
+  --chocolate-900: #4d3022;
+  --chocolate-950: #2c1812;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  background-color: var(--chocolate-50);
+  color: var(--chocolate-900);
+  font-family: sans-serif;
+}
+
+/* Define sans-serif para todos os elementos de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+li,
+label {
+  font-family: sans-serif !important;
+}
+
+@layer components {
+  .btn-chocolate {
+    @apply bg-[#8f5e39] text-white hover:bg-[#774b2e] transition-all duration-300;
+  }
+
+  .card-hover-3d {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover-3d:hover {
+    transform: translateY(-10px) scale(1.02) perspective(1000px) rotateX(2deg);
+    box-shadow: 0 20px 25px -5px rgba(112, 62, 20, 0.1),
+      0 10px 10px -5px rgba(112, 62, 20, 0.04);
+  }
+}
